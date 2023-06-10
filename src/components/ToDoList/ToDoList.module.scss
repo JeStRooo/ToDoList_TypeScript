@@ -1,0 +1,100 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.newTodo {
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  width: 550px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+
+  &__form {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+
+    &__input {
+      width: 100%;
+      padding: 3px 7px;
+      border-radius: 5px;
+      border: none;
+      font: normal 17px/19px Poppins, sans-serif;
+
+      &:focus {
+        outline: 1px solid #4448DA;
+      }
+    }
+
+    &__buttonAdd {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      background-color: #4448DA;
+      color: #fff;
+      font: normal 16px/18px Poppins, sans-serif;
+      padding: 8px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+
+      &:disabled {
+        background-color: rgba(68, 72, 218, 0.5);
+      }
+    }
+  }
+}
+
+.menu {
+  width: 570px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+  padding: 3px 10px;
+  align-items: center;
+  height: 30px;
+
+  &__activeTodos {
+    font: normal 14px/16px Poppins, sans-serif;
+    color: gray;
+    margin: 0;
+  }
+
+  &__filter {
+    display: flex;
+    gap: 1rem;
+
+    p {
+      @extend .menu__activeTodos;
+      cursor: pointer;
+      padding: 10px 0;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  &__removeAll {
+    @extend .menu__activeTodos;
+    cursor: pointer;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.todoList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
