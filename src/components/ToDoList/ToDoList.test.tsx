@@ -5,7 +5,7 @@ import {addTodo} from "../../store/actions/addTodo";
 
 import {TodosActionTypes} from "../../types/todos";
 
-describe('Add NewTodo and Remove All Todos', () => {
+describe('Add NewTodo and Remove Completed Todos', () => {
   test('Add NewTodo Testing', () => {
 
     const dispatch = jest.fn();
@@ -36,7 +36,7 @@ describe('Add NewTodo and Remove All Todos', () => {
     expect(setTitle).toHaveBeenCalledWith('');
   });
 
-  test('Remove All Todos Testing', () => {
+  test('Remove Completed Todos Testing', () => {
     const dispatch = jest.fn();
 
     const filteredTodos = [
